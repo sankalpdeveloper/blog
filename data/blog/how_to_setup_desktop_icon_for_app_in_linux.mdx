@@ -1,0 +1,40 @@
+---
+title: How to setup desktop icon for any linux app 
+date: '22024-06-10'
+tags: ['desktop_icon',"linux","application","gui","genome"]
+draft: false
+summary: How we can setup desktop icon for any linux app 
+---
+
+You have to follow these step to add desktop icons
+
+
+step 1 : Open Terminal
+
+Step 2 : 
+``` 
+cd  /usr/share/applications/
+```
+
+Step 3 : sudo nano postman.desktop (Enter your password and a file will be opened for you)
+``` 
+sudo nano postman.desktop
+```
+
+
+Step 4 : Paste Following code line...
+``` 
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Name=Postman
+Icon=/opt/Postman/app/resources/app/assets/icon.png
+Exec=/opt/Postman/Postman
+StartupNotify=false
+StartupWMClass=Postman
+OnlyShowIn=Unity;GNOME;
+X-UnityGenerated=true
+``` 
+
+### NOTE : Postman folder should place in /opt directory and please check above Icon and Exec path same as yours If not change it as your way.
